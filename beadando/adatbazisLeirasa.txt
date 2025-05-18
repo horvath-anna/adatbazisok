@@ -1,0 +1,29 @@
+Az adatbázist a 2023-as emelt digitális kultúra feladatsórból származó sql kóddal hoztam létre. 
+
+Az adatbázis egy kúlturtörténeti verseny adatait összegzi.
+Az adatbázis táblái:
+
+csapatok:
+	id - int kulcs
+	nev - varchar(30)
+	tagszam - int
+
+feladatsor:
+	id - int kulcs
+	nevado - varchar(40) Feladatsor témáját adó személy neve
+	ag - varchar(20) művészeti ág amibe a névadó tartozik
+	kituzes - date
+	hatarido - date
+
+feladat: 
+	id - int kulcs
+	feladatsorid - int összeköti a feladatsor táblával
+	pontszam - int
+
+megoldas:
+	id - int kulcs
+	feladatid - int összeköti a feladatsor táblával
+	csapatid - int összeköti a csapat táblával
+	datum - date megoldás leadásának időpontja
+	pontszam - int hány pontot kapott a feladat
+
